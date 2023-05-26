@@ -39,3 +39,58 @@
   </div>
 </body>
 </html>
+
+
+
+---------------------------------------------------------------------------beautified------------------------------------------------------------------------------------------------
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Website with Button Navigation</title>
+  <style>
+    .container {
+      text-align: center;
+      margin-top: 50px;
+    }
+    body {
+      background-image: url("193661.jpg");
+    }
+    .button-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .button-container button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 0 10px;
+      color: white; /* Set text color to white */
+      background-color: #975fa1; /* Set button color to lavender */
+      border: none; /* Remove border */
+      border-radius: 10px; /* Add curved edges */
+    }
+  </style>
+  <script>
+    // JavaScript code for handling the button clicks
+    function handleButtonClick(option) {
+      window.location.href = option + ".html";
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to TeacherTracker</h1>
+    
+    <div class="button-container">
+      <button onclick="handleButtonClick('teacher')">Teacher</button>
+      <button onclick="handleButtonClick('student')">Student</button>
+    </div>
+  </div>
+</body>
+</html>
+
