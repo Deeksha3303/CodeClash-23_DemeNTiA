@@ -1,64 +1,4 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Next Page 1</title>
-  <head>
-    <style>
-         
-        body {
-          background-image: url("https://wallpaperset.com/w/full/7/0/b/193661.jpg");
-          background-size: cover; /* Adjusts the image size to cover the entire background */
-          /* Additional background properties can be added as needed */
-        }
-        form{padding-top: 100px;
-            text-align: center;
-            font-size: 30px;}
-      </style>
-      
-   
-   
-  <script>
-    // JavaScript code for handling the dropdown selection
-    function handleDropdown() {
-      var selectedOption = document.getElementById("dropdown").value;
-      if (selectedOption !== "") {
-        window.location.href = selectedOption + ".html";
-      }
-    }
-  </script>
-</head>
-
-<body>
-
-  <h1><center>Welcome Teacher!</center></h1>
-  <p><center>Please enter your details: </center></p>
-  <main>
-    <section>
-      <h2></h2>
-      <form id="add-student-form">
-        <center><label for="username">Username:</label></center>
-        <center><input type="text" id="username" name="username" required></center>
-        <h3></h3>
-        <center><label for="pwd">Password:</label></center>
-        <center><input type="text" id="pwd" name="pwd" required></center>
-        <center><input type="submit" value="Submit"></center>
-      </form>
-    </section>
-  </main>
-</body>
-</html>
-  
-  
-  
-  
-  -----------------------------------------------------------------------------beautified-------------------------------------------------------------------------------------------
-  
-  
-  
-  
-  
-  
-  <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -67,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sample HTML Code - NewsLetter Form</title>
   <style>
+    
    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
     body {
@@ -246,6 +187,21 @@
       }
     }
   </style>
+  <script>
+    function validate() {
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+
+      // Check if the username and password match the expected values
+      if (username === "admin" && password === "password") {
+        alert("Login successful");
+        // Redirect to the desired page or perform other actions
+        window.location.href = "nextpage.html";
+      } else {
+        alert("Invalid username or password");
+      }
+    }
+  </script>
 </head>
 
 <body>
@@ -254,14 +210,14 @@
     <section class="sign-up">
       <p class="sign-up-para">Sign in to your account</p>
       <!-- the form itself -->
-      <form class="sign-in-form">
+      <form onsubmit="validate(); return false;">
         <div class="form-input">
-          <input type="text" name="user-name" id="user-name" placeholder="User Name" required>
+          <input type="text" name="username" id="username" placeholder="User Name" required>
           <span>!</span>
           <p class="warning">User name cannot be empty</p>
         </div>
         <div class="form-input">
-          <input type="Password" name="Password" id="Password" placeholder="Password" required>
+          <input type="password" name="password" id="password" placeholder="Password" required>
           <span>!</span>
           <p class="warning">Password cannot be empty</p>
         </div>
