@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Click on the button if you are available</title>
+  <style>
+    body {
+      background-image: url("193661.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+    .active {
+      background-color: #975fa1;
+      color: rgb(230, 77, 102);
+    }
+    .inactive {
+      background-color: #975fa1;
+      color: rgb(39, 230, 211);
+    }
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .button-container button {
+      margin: 10px;
+      font-size: 32px; /* Increase the font size */
+      padding: 15px 30px; /* Increase the padding */
+      border-radius: 10px; /* Add curved edges */
+    }
+    h1 {
+      text-align: center; /* Align the heading to the center */
+      color: #975fa1; /* Set text color to white */
+      font-size: 48px; /* Increase the font size */
+      margin-top: 50px;
+    }
+  </style>
+  <script>
+    function toggleState(buttonId) {
+      var button = document.getElementById(buttonId);
+      var currentState = button.dataset.state;
+
+      // Toggle the state between 0 and 1
+      var newState = currentState === '0' ? '1' : '0';
+
+      // Update the button's state
+      button.dataset.state = newState;
+
+      // Update the button's appearance based on the state
+      if (newState === '1') {
+        button.classList.remove('inactive');
+        button.classList.add('active');
+      } else {
+        button.classList.remove('active');
+        button.classList.add('inactive');
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Update Your Status</h1>
+  <div class="button-container">
+    <button id="Teacher_1" class="inactive" data-state="0" onclick="toggleState('Teacher_1')">TEACHER 1</button>
+    <button id="Teacher_2" class="inactive" data-state="0" onclick="toggleState('Teacher_2')">TEACHER 2</button>
+    <button id="Teacher_3" class="inactive" data-state="0" onclick="toggleState('Teacher_3')">TEACHER 3</button>
+    <button id="Teacher_4" class="inactive" data-state="0" onclick="toggleState('Teacher_4')">TEACHER 4</button>
+    <button id="Teacher_5" class="inactive" data-state="0" onclick="toggleState('Teacher_5')">TEACHER 5</button>
+    <button id="Teacher_6" class="inactive" data-state="0" onclick="toggleState('Teacher_6')">TEACHER 6</button>
+  </div>
+</body>
+</html>
