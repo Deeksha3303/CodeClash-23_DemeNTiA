@@ -1,0 +1,16 @@
+<style>
+  /* CSS code for styling */
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .container {
+    text-align: center;
+  }
+  select {
+    padding: 10px;
+    font-size: 16px;
+  }
+</style>

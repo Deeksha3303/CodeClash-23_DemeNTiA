@@ -2,36 +2,47 @@
 <html>
 <head>
   <title>Next Page 1</title>
+  <head>
+    <style>
+         
+        body {
+          background-image: url("https://wallpaperset.com/w/full/7/0/b/193661.jpg");
+          background-size: cover; /* Adjusts the image size to cover the entire background */
+          /* Additional background properties can be added as needed */
+        }
+        form{padding-top: 100px;
+            text-align: center;
+            font-size: 30px;}
+      </style>
+      
+   
+   
+  <script>
+    // JavaScript code for handling the dropdown selection
+    function handleDropdown() {
+      var selectedOption = document.getElementById("dropdown").value;
+      if (selectedOption !== "") {
+        window.location.href = selectedOption + ".html";
+      }
+    }
+  </script>
 </head>
+
 <body>
-  <h1>Welcome Teacher!</h1>
-  <p>Please enter your details: </p>
+
+  <h1><center>Welcome Teacher!</center></h1>
+  <p><center>Please enter your details: </center></p>
   <main>
     <section>
-      <h2>Details</h2>
+      <h2></h2>
       <form id="add-student-form">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
-        <label for="pwd">Password:</label>
-        <input type="text" id="pwd" name="pwd" required>
-        <label for= "password">Password:</label>
-        <input type="submit" value="Submit">
+        <center><label for="username">Username:</label></center>
+        <center><input type="text" id="username" name="username" required></center>
+        <h3></h3>
+        <center><label for="pwd">Password:</label></center>
+        <center><input type="text" id="pwd" name="pwd" required></center>
+        <center><input type="submit" value="Submit"></center>
       </form>
-    </section>
-    <section>
-      <h2>Student List</h2>
-      <table id="student-table">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Age</th>
-            <th>Grade</th>
-          </tr>
-        </thead>
-        <tbody id="student-table-body">
-          <!-- Student data will be dynamically added here -->
-        </tbody>
-      </table>
     </section>
   </main>
 </body>
