@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+         
+         h1 {
+      color: rgb(243, 243, 243); /* Change the color value to your desired color */
+    } 
+        
+        body {
+          background-image: url("c1.jpg");
+          background-size: cover; /* Adjusts the image size to cover the entire background */
+          /* Additional background properties can be added as needed */
+        }
+      </style>
+      
+   
+   
+  <script>
+    // JavaScript code for handling the dropdown selection
+    function handleDropdown() {
+      var selectedOption = document.getElementById("dropdown").value;
+      if (selectedOption !== "") {
+        window.location.href = selectedOption + ".html";
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to the TeacherTracker</h1>
+   
+    
+    <select id="dropdown" onchange="handleDropdown()">
+      <option value="">Select an option</option>
+      <option value="nextpage1">Teacher_1</option>
+      <option value="nextpage2">Teacher_2</option>
+      <option value="nextpage3">Teacher_3</option>
+      <option value="nextpage3">Teacher_4</option>
+      <option value="nextpage3">Teacher_5</option>
+      <option value="nextpage3">Teacher_6</option>
+    </select>
+  </div>
+</body>
+</html>

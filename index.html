@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Website with Dropdown Navigation</title>
+  <style>
+    /* CSS code for styling */
+    .container {
+      text-align: center;
+      margin-top: 50px;
+    }
+    body {
+      background-image: url("b1.jpg");
+    }
+    select {
+      padding: 10px;
+      font-size: 16px;
+    }
+  </style>
+  <script>
+    // JavaScript code for handling the dropdown selection
+    function handleDropdown() {
+      var selectedOption = document.getElementById("dropdown").value;
+      if (selectedOption !== "") {
+        window.location.href = selectedOption + ".html";
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to TeacherTracker</h1>
+    
+    <select id="dropdown" onchange="handleDropdown()">
+      <option value="">Select an option</option>
+      <option value="teacher">teacher</option>
+      <option value="student">student</option>
+      
+    </select>
+  </div>
+</body>
+</html>
